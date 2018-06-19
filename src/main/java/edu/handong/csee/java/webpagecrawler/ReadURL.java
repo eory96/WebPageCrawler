@@ -8,20 +8,33 @@ import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
-
+/**
+ * this class get url and save url information to arraylist
+ * @author gimdaegyo
+ *
+ */
 public class ReadURL {
-	//String contentsOfFile;
+	/**
+	 * This will save the url input value.
+	 */
 	String urlName;
+	/**
+	 * This will save the url information
+	 */
 	static ArrayList<String> arr = new ArrayList<String>();
-	/*public String getContentsOfFile() {
-		return contentsOfFile;
-	}*/
-	
+	/**
+	 * this is constructor
+	 * @param url
+	 */
 	public void setUrl(String url) {
 		this.urlName = url;
 	}
-
-	void mergeReadLine() throws Exception {
+	
+	/**
+	 * This method reads url and stores its information in an array list.
+	 * @throws Exception
+	 */
+	public void mergeReadLine() throws Exception {
 		URL str =new URL(urlName);
 		BufferedReader in = new BufferedReader(new InputStreamReader(str.openStream()));
 
@@ -29,7 +42,6 @@ public class ReadURL {
         while ((inputLine = in.readLine()) != null) {
         	arr.add(inputLine);
         }
-            //System.out.println(inputLine);
         in.close();
 	}
 		

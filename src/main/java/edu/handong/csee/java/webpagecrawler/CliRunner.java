@@ -7,7 +7,11 @@ import org.apache.commons.cli.HelpFormatter;
 import org.apache.commons.cli.Option;
 import org.apache.commons.cli.Options;
 
-
+/**
+ * This class allows you to use the cli option.
+ * @author gimdaegyo
+ *
+ */
 public class CliRunner {
 	
 	String addressOfPage;

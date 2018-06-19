@@ -1,13 +1,22 @@
 package edu.handong.csee.java.webpagecrawler;
 
 import java.io.FileNotFoundException;
-
+/**
+ * this is main class to run WebPageCrawler
+ * @author gimdaegyo
+ *
+ */
 public class RunnerOfCrawler {
 	String url;
 	String saveString;
 	String html;
 	boolean help;
-	
+	/**
+	 * this is main method
+	 * this class will receive URL, directory path.
+	 * @param args
+	 * @throws FileNotFoundException
+	 */
 	public static void main(String[] args){
 		RunnerOfCrawler runner = new RunnerOfCrawler();
 		runner.run(args);
@@ -36,3 +45,5 @@ public class RunnerOfCrawler {
 	}
 	
 }
+
+//-u http://www.handong.edu -d /Users/gimdaegyo/eclipse-workspace
