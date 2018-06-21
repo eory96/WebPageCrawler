@@ -34,15 +34,22 @@ public class ReadURL {
 	 * This method reads url and stores its information in an array list.
 	 * @throws Exception
 	 */
-	public void mergeReadLine() throws Exception {
-		URL str =new URL(urlName);
-		BufferedReader in = new BufferedReader(new InputStreamReader(str.openStream()));
+	public void mergeReadLine() {
+		URL str;
+		try {
+			str = new URL(urlName);
+			BufferedReader in = new BufferedReader(new InputStreamReader(str.openStream()));
 
-        String inputLine;
-        while ((inputLine = in.readLine()) != null) {
-        	arr.add(inputLine);
-        }
-        in.close();
+	        String inputLine;
+	        while ((inputLine = in.readLine()) != null) {
+	        	arr.add(inputLine);
+	        }
+	        System.out.print("You typed correct URL!! i will make file");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.print("you typed wrong URL!! i will make empty file");
+		}
+		
 	}
 		
 }

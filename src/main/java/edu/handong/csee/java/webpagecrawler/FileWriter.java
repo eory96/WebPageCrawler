@@ -14,14 +14,16 @@ public class FileWriter {
 	 * @param args
 	 * @throws FileNotFoundException
 	 */
-	public void saveToHtml(String args) throws FileNotFoundException {
+	public void saveToHtml(String args) throws Exception  {
 		
-		PrintWriter outputStream = new PrintWriter (args+"/index.html");
+		PrintWriter outputStream;
+		
+		outputStream = new PrintWriter (args+"/index.html");
 		
 		for(String line : ReadURL.arr) {
 			outputStream.println (line);
 		}
+		
 		outputStream.close();
-		System.out.println("I make html file!!");
 	}
 }
