@@ -30,7 +30,7 @@ public class RunnerOfCrawler {
 		FileWriter writer = new FileWriter();
 		cli.run(args);
 		
-		url.setUrl(parser(cli.addressOfPage));
+		url.setUrl(cli.addressOfPage);
 		try {
 			url.mergeReadLine();
 			
@@ -50,7 +50,7 @@ public class RunnerOfCrawler {
 		
 	}
 	
-	private String parser(String args) {
+	/*private String parser(String args) {
 		String realURL="";
 		int http=0;
 		int com=0;
@@ -67,7 +67,7 @@ public class RunnerOfCrawler {
 			realURL=args;
 			return realURL;
 		}
-	}
+	}*/
 	
 }
 
